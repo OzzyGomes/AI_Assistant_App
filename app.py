@@ -16,13 +16,41 @@ class AIAssistant(QWidget):
         self.layout = {}
         self.layout['main'] = QVBoxLayout()
         self.setLayout(self.layout['main'])
-    
+
+        self.init_ui()
+
     def init_ui(self):
         #add sub layout manager
         self.layout['inputs'] = QFormLayout()
         self.layout['main'].addLayout(self.layout['inputs'])
 
-        self.init_ui()
+        #add textbox
+        self.prompt = QTextEdit()
+        self.output = QTextEdit()
+
+        #Add Sliders
+        self.max_tokens = QSlider(Qt.Orientation.Horizontal, minimum=10, maximum=4000, singleStep=500, pageStep=500, value=100)
+        self.temperature = QSlider(Qt.Orientation.Horizontal, minimum=0, maximum=200)
+        self.presence_penalty = QSlider(Qt.Orientation.Horizontal, minimum=0, maximum=200)
+
+        #add buttons
+        self.btn_submit = QPushButton('&Submit', clicked=self.submit)
+        self.tbn_reset = QPushButton('&Reset', clicked=self.reset_fields)
+
+        #add status bar
+        self.status = QStatusBar()
+
+        #organize widgets
+        #----------------
+        #maximum token slider
+        self.max_tokens_values = QLabel('0.0')
+        self.layout['slider_layout'] = QHBoxLayout()
+        self.layout['slider_layout'].addWidget(self.max_tokens_values)
+        self.layout['slider_layout'].addWidget(self.max_tokens)
+        self.layout['inputs'].addRow(QLabel('Max Token:'), self.layout['slider_layout'])
+
+        #temperature slider
+        self.temperature_value = QLabel('0.0')
 
 class TabManager(QTabWidget):
     #add customized signals
