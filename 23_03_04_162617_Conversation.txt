@@ -1,0 +1,5 @@
+Prompt: 
+Quando a raça neadertal foi extinta?
+
+Output:
+A raça neandertal foi extinta há cerca de 40 mil anos.
