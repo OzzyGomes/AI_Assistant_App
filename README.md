@@ -2,7 +2,6 @@
 <html>
 <body>
     <h1>AI Personal Assistant by Ozzy and OpenAI 1.0</h1>
-    <img src="https://place-your-image-here.com" alt="AI Personal Assistant">
 
 <h2>Overview</h2>
 <p>The AI Personal Assistant is a Python desktop application that uses the OpenAI API to provide conversational AI capabilities. It allows you to interact with the OpenAI GPT-3 model by entering prompts and receiving responses. This README provides an overview of the code and how to use the application.</p>
