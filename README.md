@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>AI Personal Assistant by Ozzy and OpenAI 1.0</title>
-</head>
 <body>
     <h1>AI Personal Assistant by Ozzy and OpenAI 1.0</h1>
     <img src="https://place-your-image-here.com" alt="AI Personal Assistant">
